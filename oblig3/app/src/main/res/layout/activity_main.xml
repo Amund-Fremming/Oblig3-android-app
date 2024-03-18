@@ -6,6 +6,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp" >
     <Button
+        android:id="@+id/test_button"
         android:layout_width="96dp"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
