@@ -1,7 +1,5 @@
 package com.example.myapplication;
 
-import android.net.Uri;
-
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -9,13 +7,20 @@ import androidx.room.PrimaryKey;
 @Entity
 public class PhotoEntry {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public int id;
 
     @ColumnInfo(name  = "name")
     public String name;
 
     @ColumnInfo(name  = "uri")
-    public Uri uri;
+    public String url;
+
+    public PhotoEntry() {}
+
+    public PhotoEntry(String name, String url) {
+        this.name = name;
+        this.url = url;
+    }
 
 }

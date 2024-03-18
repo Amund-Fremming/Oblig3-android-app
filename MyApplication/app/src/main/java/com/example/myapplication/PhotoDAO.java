@@ -9,7 +9,7 @@ import java.util.List;
 
 @Dao
 public interface PhotoDAO {
-    @Query("")
+    @Query("SELECT * from photoentry")
     List<PhotoEntry> getAll();
 
     @Insert
